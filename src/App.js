@@ -1,18 +1,18 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 
 function App() {
   return (        
-      <Router>
+    <HashRouter basename='/'>
         <div>
           <Route exact path='/' component = {Home} />
-          <Route exact path='/About' component = {About} />
-          <Route exact path='/Contact' component = {Contact} />
+          <Route path='/About' component = {About} />
+          <Route path='/Contact' component = {Contact} />
         </div>
-      </Router>    
+      </HashRouter>    
   )
 }
 
